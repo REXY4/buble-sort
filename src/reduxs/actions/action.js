@@ -1,29 +1,11 @@
-export const BubleSortAction = async (array, route, dispatch) => {
-    var count = 0
-    var length = array.length
-    while (count !== length) {
-      for (var i = length; i > count; i--) {
-        var current = array[i]
-        var left = array[i - 1]
-  
-       
-        if (current === null) {
-          array.splice(i, 1)
-          continue
-        }
-  
-        if (left !== undefined && left > current) {
-          array[i - 1] = current
-          array[i] = left
-        }
-      }
-      count++
-    }
-  await dispatch({
+export const BubleSortAction = (value, route, dispatch) => {
+    let array = value;
+ let buble = array.sort((i, j) => { return i - j })
+  route.push("/pagetwo")
+  return dispatch({
       type : "ADD_DATA",
-      payload : array
+      payload : buble
   })
-  await route.push("/pagetwo")
 } 
 
 
