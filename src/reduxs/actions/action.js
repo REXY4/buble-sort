@@ -10,8 +10,8 @@ export const BubleSortAction = (value, route, dispatch) => {
               }
             }
           }
-         route.push("/pagetwo")
-         return dispatch({
+         await route.push("/pagetwo")
+         await dispatch({
              type : "ADD_DATA",
              payload : array
          })
