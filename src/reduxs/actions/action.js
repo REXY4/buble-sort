@@ -1,4 +1,4 @@
-export const BubleSortAction = (value, route, dispatch) => {
+export const BubleSortAction = async(value, route, dispatch) => {
     try {
         let array = value;
         for(var i = 0; i < array.length; i++){
@@ -10,11 +10,12 @@ export const BubleSortAction = (value, route, dispatch) => {
               }
             }
           }
-         await route.push("/pagetwo")
+         
          await dispatch({
              type : "ADD_DATA",
              payload : array
          })
+         await route.push("/pagetwo")
     } catch (error) {
         console.log(error)
     }
