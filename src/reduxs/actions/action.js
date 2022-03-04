@@ -1,4 +1,4 @@
-export const BubleSortAction = (value, route, dispatch) => {
+export const BubleSortAction = (array, route, dispatch) => {
     var count = 0
     var length = array.length
   
@@ -20,6 +20,7 @@ export const BubleSortAction = (value, route, dispatch) => {
       }
       count++
     }
+    route.push("/pageTwo")
   return dispatch({
       type : "ADD_DATA",
       payload : array
