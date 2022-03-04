@@ -11,11 +11,14 @@ import PageTwo from './pages/PageTwo';
 
 function App() {
   return (
-      <Router>
+      <Router >
+        <div >
         <Switch>
           <Route exact path="/" component={PageOne}/>
-          <Route exact path="/pagetwo" component={PageTwo}/>
+          <Route exact path="/pagetwo" component={PageTwo}/>        
         </Switch>
+        </div>
+
       </Router>
   );
 }

@@ -9,11 +9,11 @@ const PageTwo = ({getNumber,dispatch}) => {
     console.log(getNumber)
     return(
         <>
-            <div className="container">
+            <div  className="container">
                 <div>
-                    <h1>Algoritma Bubble sort</h1>
+                    <h1 >Algoritma Bubble sort</h1>
                 </div>
-                <div>
+                <div  >
                     <h3>{getNumber.join(',')}</h3>
                 </div>
             </div>

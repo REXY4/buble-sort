@@ -33,7 +33,7 @@ const PageOne = ({getNumber,dispatch}) => {
             <div className="container">
                 <div>
                     <div>
-                        <input type="number" name="number" onChange={(e)=>onChange(e)}/>
+                        <input data-testid="input" type="number" name="number" onChange={(e)=>onChange(e)}/>
                     </div>
                     <div>
                         <button onClick={()=>handleAddValue()}>Add Data</button>
@@ -47,7 +47,7 @@ const PageOne = ({getNumber,dispatch}) => {
                     </div>
                 </div>
                 <div>
-                        <button onClick={()=>BubleSortAction(arrayValue, route,dispatch)}>go to buble sort</button>
+                        <button data-testid="button"  type="button" name="button" onClick={()=>BubleSortAction(arrayValue, route,dispatch)}>go to buble sort</button>
                 </div>
             </div>
         </>
